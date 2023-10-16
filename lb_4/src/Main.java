@@ -11,6 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
         while (true) {
+
+            System.out.print("ВСё четко");
+
             System.out.print("Введите первую строку: ");
             String firstLine = scanner.nextLine();
             System.out.print("Введите вторую строку: ");
