@@ -11,9 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
         while (true) {
-            System.out.print("пошли в танки");
-            System.out.print("Можно на полчасика");
-
             System.out.print("Введите первую строку: ");
             String firstLine = scanner.nextLine();
             System.out.print("Введите вторую строку: ");
