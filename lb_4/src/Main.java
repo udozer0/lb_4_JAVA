@@ -9,6 +9,7 @@ public class Main {
     public static final Scanner scanner = new Scanner(System.in);
     public static final String puth = "lb_4/resalt.txt";
 
+    
     public static void main(String[] args) {
         while (true) {
             System.out.print("Введите первую строку: ");
