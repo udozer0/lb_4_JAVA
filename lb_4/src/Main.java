@@ -27,6 +27,7 @@ public class Main {
      */
     public static final Scanner scanner = new Scanner(System.in);
 
+<<<<<<< HEAD
     /**
      * Путь к файлу, в который будут сохранены результаты анализа.
      */
@@ -37,6 +38,9 @@ public class Main {
      *
      * @param args Аргументы командной строки (не используются в данной программе).
      */
+=======
+
+>>>>>>> 4ea97b914f647794a0a584d169def6066c13c740
     public static void main(String[] args) {
         System.out.println("Лабораторная работа 4\nВыполнили студенты группы 22ВП2 Зеляпугин и Сафронов\nЗадание: " +
                 "Проведите частотный анализ слов и символов из первой строки. Определите символы, которые:\n" +
@@ -50,6 +54,7 @@ public class Main {
             System.out.print("Введите первую строку: ");
             String firstLine = checkEmpty("Строка не может быть пустой. Попробуйте снова.");
             System.out.print("Введите вторую строку: ");
+<<<<<<< HEAD
             String secondLine = checkEmpty("Строка не может быть пустой. Попробуйте снова.");
 
 
@@ -66,6 +71,22 @@ public class Main {
 
                 int choice = checkPos("Введите действие", "Некорректный ввод. Попробуйте снова.");
                 switch (choice) {
+=======
+            String secondLine = scanner.nextLine();
+            boolean flag =true;
+            while (flag){
+                Set<Character> analis = new HashSet<>();
+                Iterator<Character> iterAnalis;
+
+                System.out.println("Выберите действие:");
+                System.out.println("1. Определить символы входящие и в первую и во вторую строку");
+                System.out.println("2. Определить символы входящие в первую и не входящие во вторую строку");
+                System.out.println("3. Определить символы входящие хотябы в одну строку");
+                System.out.println("4. Выход из приложения");
+                System.out.println("5. Начать обрабатывать следующие строки");
+
+                switch (scanner.nextInt()) {
+>>>>>>> 4ea97b914f647794a0a584d169def6066c13c740
                     case 1:
                         for (char symbol : firstLine.toCharArray()) {
                             if (secondLine.contains(String.valueOf(symbol))) {
@@ -81,7 +102,11 @@ public class Main {
                         break;
                     case 2:
                         for (char symbol : firstLine.toCharArray()) {
+<<<<<<< HEAD
                             if (!(secondLine.contains(String.valueOf(symbol)))) {
+=======
+                            if (!secondLine.contains(String.valueOf(symbol))) {
+>>>>>>> 4ea97b914f647794a0a584d169def6066c13c740
                                 analis.add(symbol);
                             }
                         }
@@ -107,12 +132,21 @@ public class Main {
                         Choice(analis);
                         break;
                     case 4:
+<<<<<<< HEAD
                         fl = false;
                         break;
                     default:
                         System.out.println("Вы ввели не верную команду");
                 }
 
+=======
+                        return;
+                    default:
+                        System.out.println("Вы ввели не корректную команду");
+                    case 5:
+                        flag=false;
+                }
+>>>>>>> 4ea97b914f647794a0a584d169def6066c13c740
             }
             System.out.println("Для выхода нажмите q");
 
